@@ -1,0 +1,115 @@
+<!--
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+111                                                                                                         111
+111    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111    111
+111    1111111  1111111111111  111           111     11111 111111111 111 1111111 11 1 1111111 1111111111    111
+111    1111111 1 11111111111 1 11111111 11111111 1111  111 111111111 111 1111111 11 11 111111 1111111111    111
+111    1111111 11 111111111 11 11111111 11111111 11111  11 111111111 111 1111111 11 111 11111 1111111111    111
+111    1111111 111 1111111 111 11111111 11111111 111111 11           111 1111111 11 1111 1111 1111111111    111
+111    1111111 1111 11111 1111 11111111 11111111 111111  1 111111111 111 1111111 11 11111 111 1111111111    111
+111    1111111 11111 111 11111 11111111 11111111 11111  11 111111111 111 1111111 11 111111 11 1111111111    111
+111    1111111 111111 1 111111 11111111 11111111 1111  111 111111111 111 1111111 11 1111111 1 1111111111    111
+111    1111111 1111111 1111111 111           111     11111 111111111 111         11 11111111  1111111111    111
+111    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111    111
+111                                                                                                         111
+111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="assets/main.css">
+    <meta name="keywords" content="speedtyping, speed typing, rapid typing, rapidtyping, faster typing"/>
+    <meta name="description" content = "Learn to type at High Speeds. Speed typing can help you"/>;
+</head>
+<body>
+    <header class="d-flex">
+        <!--The Game goes on here-->
+        <div class="game-stats">
+            <!--Score Statistics-->
+            <span>
+                High Score : <b id="hscore">0</b>
+            </span>
+            <span>
+                Level : <b id="lvl">27</b>
+            </span>
+            <span>
+                Current Score : <b id="cscore">0</b>
+            </span>
+        </div>
+        <div class="main d-flex">
+                
+            <div class = "progress">
+                <span class = "bar"></span>
+            </div>
+            <form method="GET" action="#" id = "gameplay">
+                <div class = "form-group">
+                    <span>Type the Given word within</span>
+                    <span id = "timelft">n</span>
+                    <span>Seconds</span>
+                </div>
+                <div class="form-group">
+                    <span class="Word" style = "font-family:'times new roman'">Grid</span>
+                </div>
+                <div class="form-group">
+                    <input type="text" autocomplete="off" placeholder = "Start Typing..." id = "typedval">
+                </div>
+                <div class="form-group">
+                    <span class="note">
+                        <b>Note:</b>
+                            Press Enter Key to Submit
+                    </span>
+                </div>
+            </form>
+        </div>
+    </header>
+    <!--Game Start Modal-->
+    <div class="modal-gs d-flex">
+        <h2>Welcome to <i>Speed Typing</i></h2>
+        <form id = "gamelevel">
+            <strong class="form-group">
+                Choose Game Level
+            </strong>
+            <div class="form-group d-flex">   
+                <select id = "gamelvl">
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn-prim">
+                    Start Game
+                </button>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                <strong>Instructions</strong>
+                <ol class="insts">
+                    <li>Press the Enter key to submit the Answer</li>
+                    <li>High Scores will be counted and resetted if a different level is selected</li>
+                    <li>Type Fast !</li>
+                </ol>
+            </div>
+        </form>
+    </div>
+    <!--Game Over Modal-->
+    <div class = "gameOver hide">
+        <h1 style="color:red;font-size:52px">Game Over</h1>
+        <div class="scores">
+            <span>
+                High Score : 0
+                Score : 0
+            </span>
+        </div>
+        <button class="btn-prim" onclick="restartGame()">
+            Start New
+        </button>
+    </div>
+    <div class="hidden"></div>
+    <!--Script Placed at the end of the Document-->
+    <script src="assets/main.js"></script>
+</body>
+</html>

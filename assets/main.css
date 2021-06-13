@@ -1,0 +1,164 @@
+*{
+    font-family: 'Agency FB', sans-serif;
+    transition: all 0.3s ease;
+}
+::selection{
+    background: #26ace3; /* Modifying Selection */
+}
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #ccc; /*Adjusting the scrollbar a bit*/
+}
+body{
+    margin: 0;
+}
+.d-flex{ /*Display : Flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header{
+    min-height: 100vh;
+    flex-direction: column;/*To avoid formation of Rows*/
+}
+.main{
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+/*Avoiding Overlapping*/
+.form-group{
+    margin:5px;
+}
+.form-group span.Word{
+    font-size: 51px;
+}
+form{
+    text-align: center;
+}
+.form-group input[type=text]{/* For not affecting other Inputs */
+    width:200px;
+    height: 30px;
+    padding: 6px 8px;
+    outline: none;
+    margin:10px;
+    font-size:24px;
+}
+.form-group .note{
+    text-align: left;
+    color: rgba(0,0,0,0.6);
+}
+header .game-stats{
+    display: flex;
+    justify-content: space-between;/* To enhance the design */
+    align-items: center;
+    width: 50%;
+}
+.modal-gs{
+    position: fixed;
+    top:0;right: 0;left: 0;bottom: 0;
+    background: #eee;
+    flex-direction: column;             /*To avoid formation of Rows*/
+}
+.modal-gs form select{
+    padding:6px 16px;
+    width: 150px;
+    outline:none;
+    font-size:21px;
+    border:none;
+    display: block;
+    margin:8px;
+}
+.modal-gs form select option{
+    color: #000;
+}
+.modal-gs form select option:hover{
+    background: #fff;
+}
+.btn-prim{
+    padding:14px 16px;
+    border: none;
+    outline: none;
+    color: #333;
+    background: #26ace3;
+    font-size: 21px;
+    border-radius: 4px;
+    margin:5px;
+    cursor: pointer;
+}
+.btn-prim:hover{
+    background: #e4e4e4;
+}
+.hide{
+    display: none!important; /* Preventing it from other CSS codes effect */
+}
+.show{
+    display: flex!important;
+}
+.progress{
+    width: 300px;
+    margin:30px;
+    margin-bottom:10px;
+    border:1px solid rgba(0,0,0,0.3);
+}
+.progress .bar{
+    height: 6px;
+    display: block;
+    width:300px;
+    background: red;
+}
+@keyframes heartbeat{
+    0%{
+        background: yellow;
+        width:0%
+    }
+    50%{
+        background: green;
+    }
+    100%{
+        background: red;
+        width:300px;
+    }
+}
+.gameOver{
+    display: flex;
+    justify-content: center;
+    background: #eee;
+    position: fixed;
+    top:0;right: 0;left: 0;bottom: 0;
+    align-items: center;
+    z-index: 2;
+    flex-direction: column;
+}
+@media screen and (max-width:700px){
+    .main{
+        border:none;
+    }
+}
+.form-group .insts{
+    line-height: 2;
+}
+.form-group .insts li{
+    position: relative;
+}
+.form-group .insts li:after{
+    content:'';
+    display:block;
+    height:2px;
+    width:0%;
+    position:absolute;
+    bottom:0;
+    background: #000;
+    animation:elongate 2s linear;
+    bottom:6px;
+}
+@keyframes elongate{
+    0%{width:0%}
+    50%{width:100%}
+    100%{width:0%}
+}
